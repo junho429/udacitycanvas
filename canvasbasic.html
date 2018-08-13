@@ -15,6 +15,9 @@
         image.onload = function(){
             console.log("Loaded image");
             ctx.drawImage(image,0,0,c.width, c.height);
+
+            var saveImage = c.toDataURL();
+            windows.open(savedImage);
         }
 
         image.src = 'http://www.desibucket.com/wp-content/uploads/2017/04/Good-Evening-Image-1.jpg';
