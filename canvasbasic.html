@@ -8,7 +8,16 @@
     <canvas id = "c" width = "200" height = "200"></canvas>
     <script>
         var c = document.querySelector("#c");
-        var 캔버스콘텐츠 = c.getContext("2d");
+        var ctx = c.getContext("2d");
+
+        var image = new Image();
+
+        image.onload = function(){
+            console.log("Loaded image");
+            ctx.drawImage(image,0,0,c.width, c.height);
+        }
+
+        image.src = 'http://www.desibucket.com/wp-content/uploads/2017/04/Good-Evening-Image-1.jpg';
     </script>
 </body>
 </html>
